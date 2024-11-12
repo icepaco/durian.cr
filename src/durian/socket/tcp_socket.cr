@@ -1,5 +1,5 @@
 class Durian::TCPSocket < TCPSocket
-  def self.connect(host : String, port : Int32, resolver : Durian::Resolver, connect_timeout : Int | Float? = nil)
+  def self.connect(host : String, port : Int32, resolver : Durian::Resolver, connect_timeout : Number | Float? = nil)
     Resolver.get_tcp_socket! host, port, resolver, connect_timeout
   end
 
